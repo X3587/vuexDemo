@@ -3,7 +3,8 @@
     <div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link> |
-      <router-link to="/test">Vuex Demo</router-link>
+      <router-link to="/test">Vuex Demo</router-link> |
+      <router-link to="/kaihe">开盒动画</router-link>
     </div>
     <router-view/>
   </div>
