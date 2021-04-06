@@ -1,4 +1,5 @@
-# vue.ui
+# 项目用vue ui搭建
+学习vuex的基本法
 
 ## Project setup
 ```
