@@ -1,6 +1,6 @@
 <template>
-  <div class="hezi">
-    <div class="gaizi">
+  <div class="hezi" @click="kaihezi">
+    <div class="gaizi" :class="isKaiHe ? 'kaile' : ''">
       <img
         src="https://img.alicdn.com/imgextra/i3/751308485/O1CN01Jmq3lo2CYBI1mp3E5_!!751308485.png"
       />
@@ -15,20 +15,31 @@
 <script>
 export default {
   data() {
-    return {}
+    return {
+      isKaiHe: false
+    }
+  },
+  methods: {
+    kaihezi() {
+      this.isKaiHe = true
+      setTimeout(() => {
+        this.isKaiHe = false
+      },3100)
+    }
   }
 }
 </script>
 <style scoped lang="scss">
 .hezi {
   position: relative;
-  top: 500px;
+  top: 200px;
   .gaizi {
     position: absolute;
     z-index: 1;
     left: 50px;
-    animation: HH 3s linear infinite,
-      NN 3s cubic-bezier(0.16, 0.64, 0.43, 0.96) infinite;
+  }
+  .kaile {
+    animation: HH 3s linear, NN 3s cubic-bezier(0.16, 0.64, 0.43, 0.96);
   }
   .heti {
     position: absolute;
